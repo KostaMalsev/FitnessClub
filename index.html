@@ -2,19 +2,65 @@
 <html lang="en">
 <head>
     <title>Fitness club</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="styles.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="description" content="Fitness Club">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="theme-color" content="#000">
 </head>
 <body>
 
 <h1>Fitness club</h1>
 
-<section id="demos">
-    <!--<div id="liveView" class="camView"> -->
-    <div id="liveView" >
+<div class="overlay left" id="main">
+    <h4>Enter Food name</h4>
+    <div class="input long"><input type="text" required="required" placeholder="Type a mess..." id="result"></div>
     </div>
-</section>
+</div>
+<button style="margin-bottom: 30px" onclick="GetNutrients()">Check nutrients</button>
+
+
+<div class="overlay left" id="person_wrap">
+    <h4>Enter person details:</h4>
+    <h4>Name</h4>
+    <div class="input long"><input type="text" required="required" placeholder="Type a mess..." id="person"></div>
+    <h4>Strength</h4>
+    <div class="input long"><input type="text" required="required" placeholder="Type a mess..." id="strength"></div>
+</div>
+<button style="margin-bottom: 30px" onclick="StorePerson()"> Add new Client</button>
+
+<script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-database.js"></script>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<!-- <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script> -->
+<!--<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script> -->
+
+
+<script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+        apiKey: "AIzaSyDlfREpWSBQ4cnNpnhEvykd4Z7RVHo_UxY",
+        authDomain: "fitnessclub-757e7.firebaseapp.com",
+        databaseURL: "https://fitnessclub-757e7.firebaseio.com",
+        projectId: "fitnessclub-757e7",
+        storageBucket: "fitnessclub-757e7.appspot.com",
+        messagingSenderId: "196446665859",
+        appId: "1:196446665859:web:ddc1fe60ebb83312cd2fb6",
+        measurementId: "G-ZYTM26WZ3C"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+</script>
+
 <script src="main.js"></script>
+
+
 </body>
 </html>
+
+
+
+
